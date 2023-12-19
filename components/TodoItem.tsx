@@ -13,7 +13,7 @@ export interface TodoItemProps {
 
 export function TodoItem({ title, completed, favorite, className }: TodoItemProps & { className?: string }) {
   function ff() {
-    console.log(process.env.GPT_KEY);
+    alert(process.env.GPT_KEY);
   }
 
   return (
