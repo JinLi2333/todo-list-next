@@ -1,18 +1,13 @@
-import { TodoItemListSection } from '@/components/TodoItemListSection'
-import { Button } from '@/components/ui/button'
+'use client';
 
-const mockTodoItems = [
-  { title: 'Hello world', completed: false, favorite: false },
-  { title: 'Hello world', completed: false, favorite: true },
-  { title: 'Hello world', completed: true, favorite: false },
-  { title: 'Hello world', completed: true, favorite: true },
-]
+import { TodoItemListSection } from '@/components/TodoItemListSection'
+import todoStore from '@/components/data/TodoStore'
 
 export default function Home() {
   return (
     <div className=" w-[800px] h-[600px] bg-blue-500">
-      <TodoItemListSection className='mx-2 my-2' title="mock" items={mockTodoItems} />
-      <TodoItemListSection className='mx-2 my-2' title="fuck" items={mockTodoItems} />
+      <TodoItemListSection className='mx-2 my-2' title="mock" todoStore={todoStore} />
+      <TodoItemListSection className='mx-2 my-2' title="fuck" todoStore={todoStore} />
     </div>
   )
 }
